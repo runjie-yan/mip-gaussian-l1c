@@ -6,7 +6,7 @@ In 3D Gaussian Splatting, pruning heuristics typically rely on opacity or gradie
 
 $$\Delta L_i = \mathcal{L}_1(I_{\text{render}},\, I_{\text{GT}}) - \mathcal{L}_1(I_{\text{render} \setminus \{g_i\}},\, I_{\text{GT}})$$
 
-A positive $\Delta L_i$ means Gaussian $g_i$ reduces the L1 loss — it is useful. A negative value means it increases the loss — it is harmful or redundant.
+A negative $\Delta L_i$ means Gaussian $g_i$ reduces the L1 loss — it is useful. A positive value means it increases the loss — it is harmful or redundant.
 
 Computing this naively requires $N$ extra forward passes (one per Gaussian). This implementation computes it for all Gaussians simultaneously, fused into the existing backward pass, with **zero additional memory overhead**.
 

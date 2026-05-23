@@ -156,5 +156,13 @@ If you use the L1 contribution feature, please cite the Mip-Splatting paper:
 ```
 and our paper:
 ```bibtex
-TODO
+@misc{yan2026generative3dgaussianslearned,
+      title={Generative 3D Gaussians with Learned Density Control}, 
+      author={Runjie Yan and Yan-Pei Cao and Peng Wang and Ding Liang and Yuan-Chen Guo},
+      year={2026},
+      eprint={2605.16355},
+      archivePrefix={arXiv},
+      primaryClass={cs.GR},
+      url={https://arxiv.org/abs/2605.16355}, 
+}
 ```
