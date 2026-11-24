@@ -16,7 +16,7 @@
 #include <iostream>
 #include <tuple>
 #include <stdio.h>
-#include <cuda_runtime_api.h>
+#include <hip/hip_runtime_api.h>
 #include <memory>
 #include "cuda_rasterizer/config.h"
 #include "cuda_rasterizer/rasterizer.h"

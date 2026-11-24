@@ -9,12 +9,13 @@
  * For inquiries contact  george.drettakis@inria.fr
  */
 
+#include "hip/hip_runtime.h"
 #pragma once
 
 #include <iostream>
 #include <vector>
 #include "rasterizer.h"
-#include <cuda_runtime_api.h>
+#include <hip/hip_runtime_api.h>
 #include <cstdint>
 
 namespace CudaRasterizer

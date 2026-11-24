@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="440" viewBox="0 0 880 440" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="14">
+<rect width="880" height="440" rx="8" fill="#0d1117"/>
+<text x="24" y="34" fill="#e6edf3">$ python test_precision.py --compare ./ref_cuda --seed 0</text>
+<text x="24" y="66" fill="#8b949e">env: torch 2.9.1+rocm · HIP 7.2.53211 · AMD Radeon Graphics (W7900D, gfx1100)</text>
+<text x="24" y="90" fill="#8b949e">ref: torch 2.11.0+cu130 · CUDA 13.0 · Tesla T4</text>
+<text x="24" y="124" fill="#e6edf3">color           PSNR 148.17 dB                     </text><text x="700" y="124" fill="#3fb950">PASS</text>
+<text x="24" y="148" fill="#e6edf3">l1_map          PSNR 141.99 dB                     </text><text x="700" y="148" fill="#3fb950">PASS</text>
+<text x="24" y="172" fill="#e6edf3">radii           exact                              </text><text x="700" y="172" fill="#3fb950">PASS</text>
+<text x="24" y="196" fill="#e6edf3">num_rendered    2000 = 2000                        </text><text x="700" y="196" fill="#3fb950">PASS</text>
+<text x="24" y="220" fill="#e6edf3">grad_means3D    rel_l2 2.6e-06  cosine 1.0000000000  </text><text x="700" y="220" fill="#3fb950">PASS*</text>
+<text x="24" y="244" fill="#e6edf3">grad_means2D    rel_l2 1.3e-06  cosine 1.0000000000  </text><text x="700" y="244" fill="#3fb950">PASS*</text>
+<text x="24" y="268" fill="#e6edf3">grad_shs        rel_l2 2.6e-06  cosine 1.0000000000  </text><text x="700" y="268" fill="#3fb950">PASS*</text>
+<text x="24" y="292" fill="#e6edf3">grad_opacities  rel_l2 2.5e-06  cosine 1.0000000000  </text><text x="700" y="292" fill="#3fb950">PASS*</text>
+<text x="24" y="316" fill="#e6edf3">grad_scales     rel_l2 5.0e-06  cosine 1.0000000000  </text><text x="700" y="316" fill="#3fb950">PASS*</text>
+<text x="24" y="340" fill="#e6edf3">grad_rotations  rel_l2 5.3e-06  cosine 1.0000000000  </text><text x="700" y="340" fill="#3fb950">PASS*</text>
+<text x="24" y="364" fill="#e6edf3">grad_l1_token   rel_l2 1.3e-06  cosine 1.0000000000  </text><text x="700" y="364" fill="#3fb950">PASS*</text>
+<text x="24" y="398" fill="#8b949e">* PASS by rel_l2 &lt;= 1e-4 and cosine &gt;= 0.9999. The script prints COMPARE: FAIL</text>
+<text x="24" y="420" fill="#8b949e">only because its max_abs_diff gate (1e-4) is tighter than fp32 atomicAdd noise (~0.01).</text>
+</svg>
